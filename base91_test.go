@@ -10,7 +10,7 @@ var samples = map[string]string{
 
 func TestEncode(t *testing.T) {
 	for k, v := range samples {
-		if val := Encode(k); val != v {
+		if val := EncodeToString([]byte(k)); val != v {
 			t.Errorf("Incorrect encoding of `%s` got `%s`", k, val)
 		}
 	}
@@ -18,7 +18,7 @@ func TestEncode(t *testing.T) {
 
 func TestDecode(t *testing.T) {
 	for k, v := range samples {
-		if val := Decode(v); val != k {
+		if val := DecodeToString([]byte(v)); val != k {
 			t.Errorf("Incorrect decoding of `%s` got `%s`", v, val)
 		}
 	}
