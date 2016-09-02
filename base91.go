@@ -1,7 +1,7 @@
 package base91
 
 // Encoding table holds all the characters for base91 encoding
-var enctab = []byte("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~\"")
+var enctab = []byte("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~'")
 
 // Decoding table maps all the characters back to their integer values
 var dectab = map[byte]byte{
